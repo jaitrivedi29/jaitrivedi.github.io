@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -48,10 +49,6 @@
             padding: 20px;
         }
 
-        section:nth-of-type(odd) {
-            background: #FDEAE6;
-        }
-
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -62,6 +59,19 @@
             color: #E2725A;
         }
 
+        details {
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #FDEAE6;
+            border-radius: 5px;
+        }
+
+        summary {
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
         ul {
             list-style: none;
             padding: 0;
@@ -69,6 +79,14 @@
 
         ul li {
             margin: 10px 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            border-radius: 10px;
         }
 
         footer {
@@ -94,12 +112,12 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const projects = [
-                { title: "Predicting Air-Passenger Headcount", description: "Built time series ARIMA model to analyze air-passenger headcount between 2009-2014 generating a model with R2 of ~0.90.Also, gathered insights into key attributes influencing number of flights using Random Forest model with test R2 of 0.92." },
-                { title: "DBMS for Indian Jewelry Retailer", description: "Developed an end to end database management system for an Indian Jewelry Retialer. Prepared SQL queries to evaluate key business metrics like inventory stocking, turnover and salesperson headcount and revenue." },
-                { title: "Predicting Stadium Attendance", description: "Proposed model using ensemble of Light GBM, XG Boost and Random Forest for Indianapolis Colts to predict stadium attendance, resulting in potential cost savings of USD 100,000/year" }
+                { title: "Predicting Air-Passenger Headcount", description: "Built time series ARIMA model to analyze air-passenger headcount between 2009-2014 generating a model with R2 of ~0.90. Also, gathered insights into key attributes influencing number of flights using Random Forest model with test R2 of 0.92." },
+                { title: "DBMS for Indian Jewelry Retailer", description: "Developed an end-to-end database management system for an Indian Jewelry Retailer. Prepared SQL queries to evaluate key business metrics like inventory stocking, turnover and salesperson headcount and revenue." },
+                { title: "Predicting Stadium Attendance", description: "Proposed model using ensemble of Light GBM, XGBoost, and Random Forest for Indianapolis Colts to predict stadium attendance, resulting in potential cost savings of USD 100,000/year." }
             ];
 
-            const skills = ["Skill 1", "Skill 2", "Skill 3", "Skill 4"];
+            const skills = ["Python", "SQL", "Tableau", "R", "Data Visualization", "Machine Learning"];
 
             // Dynamically populate skills
             const skillsList = document.querySelector('#skills-list');
@@ -119,46 +137,58 @@
         });
     </script>
 </head>
+
 <body>
     <header>
         <h1>Welcome to My Portfolio</h1>
     </header>
 
     <nav>
-        <a href="#intro">Intro</a>
+        <a href="#intro">Introduction</a>
         <a href="#work-experience">Work Experience</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
     </nav>
 
     <section id="intro" class="container">
-        <h2>Intro</h2>
-        <p>Hello! I'm Jai Trivedi, an experienced Analytics professional. With over four years of experience in data science and analytics across diverse industries, I bring a well-rounded skill set and a proven track record of delivering impactful solutions. 
-              My expertise spans data cleaning, exploration, predictive modeling, big data analysis, and strategic planning, with a strong focus on driving data-informed decision-making. 
-              I am proficient in SQL, Python, and Tableau, leveraging these tools to design efficient workflows, develop predictive models, and create dynamic visualizations that translate complex data into actionable insights.</p>
+        <details open>
+            <summary>Introduction</summary>
+            <img src="path/to/your/intro-image.jpg" alt="Introduction Image">
+            <p>Hello! I'm Jai Trivedi, an experienced Analytics professional. With over four years of experience in data science and analytics across diverse industries, I bring a well-rounded skill set and a proven track record of delivering impactful solutions. My expertise spans data cleaning, exploration, predictive modeling, big data analysis, and strategic planning, with a strong focus on driving data-informed decision-making. I am proficient in SQL, Python, and Tableau, leveraging these tools to design efficient workflows, develop predictive models, and create dynamic visualizations that translate complex data into actionable insights.</p>
+        </details>
     </section>
 
     <section id="work-experience" class="container">
-        <h2>Work Experience</h2>
-        <ul>
-            <li><strong>Senior Data Analyst</strong> at Genpact (Aug 2023 - Present)</li>
-            <li><strong>Decision Analytics Assoicate</strong> at ZS Associates (April 2021 - June 2022)</li>
-            <li><strong>Data Analyst</strong> at Evalueserve (June 2019 - December 2020)</li>
-        </ul>
+        <details>
+            <summary>Work Experience</summary>
+            <img src="path/to/your/work-experience-image.jpg" alt="Work Experience Image">
+            <ul>
+                <li><strong>Senior Data Analyst</strong> at Genpact (Aug 2023 - Present)</li>
+                <li><strong>Decision Analytics Associate</strong> at ZS Associates (April 2021 - June 2022)</li>
+                <li><strong>Data Analyst</strong> at Evalueserve (June 2019 - July 2020)</li>
+            </ul>
+        </details>
     </section>
 
     <section id="skills" class="container">
-        <h2>Skills</h2>
-        <ul id="skills-list"></ul>
+        <details>
+            <summary>Skills</summary>
+            <img src="path/to/your/skills-image.jpg" alt="Skills Image">
+            <ul id="skills-list"></ul>
+        </details>
     </section>
 
     <section id="projects" class="container">
-        <h2>Projects</h2>
-        <ul id="projects-list"></ul>
+        <details>
+            <summary>Projects</summary>
+            <img src="path/to/your/projects-image.jpg" alt="Projects Image">
+            <ul id="projects-list"></ul>
+        </details>
     </section>
 
     <footer>
         <p>&copy; 2025 Jai Trivedi. All rights reserved.</p>
     </footer>
 </body>
+
 </html>
