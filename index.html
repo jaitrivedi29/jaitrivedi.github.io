@@ -11,7 +11,8 @@
             margin: 0;
             padding: 0;
             line-height: 1.6;
-            color: #4AG274;
+            display: flex;
+            height: 100vh;
         }
 
         header {
@@ -19,103 +20,62 @@
             color: white;
             padding: 20px 0;
             text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
         }
 
-        header h1 {
-            margin: 0;
+        .main-container {
+            display: flex;
+            width: 100%;
+            margin-top: 80px;
         }
 
         nav {
+            width: 20%;
+            background: #C65A49;
+            padding: 20px;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            background: #C65A49;
-            padding: 10px 0;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             margin: 10px 0;
-            padding: 5px 10px;
-            width: 100%;
+            padding: 10px;
             text-align: center;
+            border-radius: 5px;
         }
 
         nav a:hover {
             background: white;
             color: #C65A49;
-            border-radius: 5px;
         }
 
-        section {
+        .content {
+            width: 80%;
             padding: 20px;
+            overflow-y: auto;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        h2 {
-            text-align: center;
-            color: #E2725A;
-        }
-
-        details {
-            border: 1px solid #ddd;
-            margin-bottom: 10px;
-            padding: 10px;
-            background-color: #FDEAE6;
-            border-radius: 5px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        summary {
-            font-size: 1.2em;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        summary::marker {
+        .section {
             display: none;
         }
 
-        summary::before {
-            content: '\25B6';
-            padding-right: 10px;
-            font-size: 1.2em;
-            vertical-align: middle;
-        }
-
-        details[open] summary::before {
-            content: '\25BC';
-        }
-
-        details[open] {
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
-
-        details img {
-            max-width: 40%;
-            margin-right: 20px;
-            border-radius: 10px;
+        .section.active {
+            display: block;
         }
 
         .details-content {
-            flex-grow: 1;
+            display: flex;
+            gap: 20px;
         }
 
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            margin: 10px 0;
+        .details-content img {
+            max-width: 300px;
+            border-radius: 10px;
         }
 
         footer {
@@ -123,47 +83,56 @@
             color: white;
             text-align: center;
             padding: 10px 0;
+            width: 100%;
             position: fixed;
             bottom: 0;
-            width: 100%;
+            left: 0;
         }
 
         @media (max-width: 768px) {
-            details {
+            .main-container {
                 flex-direction: column;
             }
 
-            details img {
-                max-width: 100%;
-                margin-bottom: 10px;
+            nav {
+                width: 100%;
+                flex-direction: row;
+                overflow-x: auto;
+            }
+
+            nav a {
+                flex: 1;
+            }
+
+            .content {
+                width: 100%;
             }
         }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const projects = [
-                { title: "Predicting Air-Passenger Headcount", description: "Built time series ARIMA model to analyze air-passenger headcount between 2009-2014 generating a model with R2 of ~0.90. Also, gathered insights into key attributes influencing number of flights using Random Forest model with test R2 of 0.92." },
-                { title: "DBMS for Indian Jewelry Retailer", description: "Developed an end-to-end database management system for an Indian Jewelry Retailer. Prepared SQL queries to evaluate key business metrics like inventory stocking, turnover and salesperson headcount and revenue." },
-                { title: "Predicting Stadium Attendance", description: "Proposed model using ensemble of Light GBM, XGBoost, and Random Forest for Indianapolis Colts to predict stadium attendance, resulting in potential cost savings of USD 100,000/year." }
-            ];
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('nav a');
 
-            const skills = ["Python", "SQL", "Tableau", "R", "Data Visualization", "Machine Learning"];
+            function showSection(sectionId) {
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                    if (section.id === sectionId) {
+                        section.classList.add('active');
+                    }
+                });
+            }
 
-            // Dynamically populate skills
-            const skillsList = document.querySelector('#skills-list');
-            skills.forEach(skill => {
-                const li = document.createElement('li');
-                li.textContent = skill;
-                skillsList.appendChild(li);
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetSection = link.getAttribute('href').substring(1);
+                    showSection(targetSection);
+                });
             });
 
-            // Dynamically populate projects
-            const projectsList = document.querySelector('#projects-list');
-            projects.forEach(project => {
-                const li = document.createElement('li');
-                li.innerHTML = `<strong>${project.title}:</strong> ${project.description}`;
-                projectsList.appendChild(li);
-            });
+            // Show the introduction section by default
+            showSection('intro');
         });
     </script>
 </head>
@@ -173,56 +142,63 @@
         <h1>Welcome to My Portfolio</h1>
     </header>
 
-    <nav>
-        <a href="#intro">Introduction</a>
-        <a href="#work-experience">Work Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-    </nav>
+    <div class="main-container">
+        <nav>
+            <a href="#intro">Introduction</a>
+            <a href="#work-experience">Work Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+        </nav>
 
-    <section id="intro" class="container">
-        <details open>
-            <summary>Introduction</summary>
-            <div class="details-content">
-                <img src="assets/profile.jpg" alt="Introduction Image">
-                <p>Hello! I'm Jai Trivedi, an experienced Analytics professional. With over four years of experience in data science and analytics across diverse industries, I bring a well-rounded skill set and a proven track record of delivering impactful solutions. My expertise spans data cleaning, exploration, predictive modeling, big data analysis, and strategic planning, with a strong focus on driving data-informed decision-making. I am proficient in SQL, Python, and Tableau, leveraging these tools to design efficient workflows, develop predictive models, and create dynamic visualizations that translate complex data into actionable insights.</p>
-            </div>
-        </details>
-    </section>
+        <div class="content">
+            <section id="intro" class="section active">
+                <h2>Introduction</h2>
+                <div class="details-content">
+                    <img src="path/to/your/intro-image.jpg" alt="Introduction Image">
+                    <p>Hello! I'm Jai Trivedi, an experienced Analytics professional. With over four years of experience in data science and analytics across diverse industries, I bring a well-rounded skill set and a proven track record of delivering impactful solutions. My expertise spans data cleaning, exploration, predictive modeling, big data analysis, and strategic planning, with a strong focus on driving data-informed decision-making. I am proficient in SQL, Python, and Tableau, leveraging these tools to design efficient workflows, develop predictive models, and create dynamic visualizations that translate complex data into actionable insights.</p>
+                </div>
+            </section>
 
-    <section id="work-experience" class="container">
-        <details>
-            <summary>Work Experience</summary>
-            <div class="details-content">
-                <img src="path/to/your/work-experience-image.jpg" alt="Work Experience Image">
-                <ul>
-                    <li><strong>Senior Data Analyst</strong> at Genpact (Aug 2023 - Present)</li>
-                    <li><strong>Decision Analytics Associate</strong> at ZS Associates (April 2021 - June 2022)</li>
-                    <li><strong>Data Analyst</strong> at Evalueserve (June 2019 - July 2020)</li>
-                </ul>
-            </div>
-        </details>
-    </section>
+            <section id="work-experience" class="section">
+                <h2>Work Experience</h2>
+                <div class="details-content">
+                    <img src="path/to/your/work-experience-image.jpg" alt="Work Experience Image">
+                    <ul>
+                        <li><strong>Senior Data Analyst</strong> at Genpact (Aug 2023 - Present)</li>
+                        <li><strong>Decision Analytics Associate</strong> at ZS Associates (April 2021 - June 2022)</li>
+                        <li><strong>Data Analyst</strong> at Evalueserve (June 2019 - July 2020)</li>
+                    </ul>
+                </div>
+            </section>
 
-    <section id="skills" class="container">
-        <details>
-            <summary>Skills</summary>
-            <div class="details-content">
-                <img src="path/to/your/skills-image.jpg" alt="Skills Image">
-                <ul id="skills-list"></ul>
-            </div>
-        </details>
-    </section>
+            <section id="skills" class="section">
+                <h2>Skills</h2>
+                <div class="details-content">
+                    <img src="path/to/your/skills-image.jpg" alt="Skills Image">
+                    <ul>
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>Tableau</li>
+                        <li>R</li>
+                        <li>Data Visualization</li>
+                        <li>Machine Learning</li>
+                    </ul>
+                </div>
+            </section>
 
-    <section id="projects" class="container">
-        <details>
-            <summary>Projects</summary>
-            <div class="details-content">
-                <img src="path/to/your/projects-image.jpg" alt="Projects Image">
-                <ul id="projects-list"></ul>
-            </div>
-        </details>
-    </section>
+            <section id="projects" class="section">
+                <h2>Projects</h2>
+                <div class="details-content">
+                    <img src="path/to/your/projects-image.jpg" alt="Projects Image">
+                    <ul>
+                        <li><strong>Predicting Air-Passenger Headcount:</strong> Built time series ARIMA model to analyze air-passenger headcount between 2009-2014 generating a model with R2 of ~0.90. Also, gathered insights into key attributes influencing number of flights using Random Forest model with test R2 of 0.92.</li>
+                        <li><strong>DBMS for Indian Jewelry Retailer:</strong> Developed an end-to-end database management system for an Indian Jewelry Retailer. Prepared SQL queries to evaluate key business metrics like inventory stocking, turnover and salesperson headcount and revenue.</li>
+                        <li><strong>Predicting Stadium Attendance:</strong> Proposed model using ensemble of Light GBM, XGBoost, and Random Forest for Indianapolis Colts to predict stadium attendance, resulting in potential cost savings of USD 100,000/year.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2025 Jai Trivedi. All rights reserved.</p>
