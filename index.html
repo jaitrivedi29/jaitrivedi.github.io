@@ -66,7 +66,9 @@
         }
 
         .details-content img {
-            max-width: 100%;
+            max-width: 50%; /* Medium size for consistency */
+            height: auto;
+            margin: 0 auto;
             border-radius: 10px;
         }
 
@@ -96,6 +98,10 @@
             font-size: 2em;
         }
 
+        p, h3, li {
+            color: #f0f8ff; /* Softer white for text */
+        }
+
         @media (max-width: 768px) {
             .main-container {
                 flex-direction: column;
@@ -113,6 +119,10 @@
 
             .content {
                 width: 100%;
+            }
+
+            .details-content img {
+                max-width: 100%;
             }
         }
     </style>
@@ -171,29 +181,25 @@
                         <li><strong>Senior Data Analyst</strong> at Genpact (Aug 2023 - Present)
                             <div class="subsection">
                                 <h3>Key Contributions:</h3>
-                                <p>Collaborated with cross-functional stakeholders (finance, marketing, and operations) to design data-driven pricing and promotional strategies, leveraging SQL for data aggregation and delivering actionable insights.</p>
-                                <p>Developed and maintained analytics for a ~$100M/year rewards program at a Fortune 50 Med-Tech company, using SQL to extract and aggregate data and Tableau for impactful visualizations.</p>
-                                <p>Implemented automated inventory tracking systems with SQL and Python, enabling national account managers to monitor inventory levels, prevent SKU shortages, and optimize supply chain operations.</p>
-                                <p>Integrated a GenAI chatbot into sales operations, reducing customer handling time by 30% and streamlining efficiency.</p>
-                                <p>Automated operational processes using Python, saving $133,000 annually by reducing project execution time by 25%.</p>
-                                <p>Designed and deployed a Tableau dashboard for real-time monitoring of sales metrics for 37,000 accounts, improving stakeholder visibility.</p>
+                                <p>Collaborated with cross-functional stakeholders to design data-driven pricing and promotional strategies.</p>
+                                <p>Developed and maintained analytics for a ~$100M/year rewards program using SQL and Tableau.</p>
+                                <p>Implemented automated inventory tracking systems with SQL and Python, optimizing supply chain operations.</p>
                                 <img src="path/to/your/key-contributions-image.jpg" alt="Key Contributions Image">
                             </div>
                         </li>
                         <li><strong>Decision Analytics Associate</strong> at ZS Associates (April 2021 - June 2022)
                             <div class="subsection">
                                 <h3>Major Projects:</h3>
-                                <p>Facilitated agile development cycles, collaborating with cross-functional teams to prioritize and refine features for machine learning models managing over 15 million customer records.</p>
-                                <p>Partnered with data scientists to design predictive models like Cox Regression and Random Forest for patient survival outcomes, improving accuracy by 16%.</p>
-                                <p>Developed a promotional effectiveness model, improving revenue by 4% using Python and SQL for data analysis.</p>
+                                <p>Designed predictive models improving patient survival outcome predictions by 16%.</p>
+                                <p>Developed a promotional effectiveness model, improving revenue by 4% using Python and SQL.</p>
                                 <img src="path/to/your/major-projects-image.jpg" alt="Major Projects Image">
                             </div>
                         </li>
                         <li><strong>Data Analyst</strong> at Evalueserve (June 2019 - July 2020)
                             <div class="subsection">
                                 <h3>Highlights:</h3>
-                                <p>Led to successful deal closure worth $2.5 million by analyzing sales data and recommending pricing strategies.</p>
-                                <p>Reduced ad-hoc reporting time by 40% by designing an automated Tableau dashboard for KPIs.</p>
+                                <p>Led to a $2.5 million deal closure by analyzing sales data and recommending pricing strategies.</p>
+                                <p>Reduced ad-hoc reporting time by 40% with automated Tableau dashboards for key metrics.</p>
                                 <img src="path/to/your/highlights-image.jpg" alt="Highlights Image">
                             </div>
                         </li>
@@ -242,14 +248,14 @@
                         <li><strong>Predicting Air-Passenger Headcount:</strong>
                             <div class="subsection">
                                 <h3>Details:</h3>
-                                <p>Built time series ARIMA model to analyze air-passenger headcount between 2009-2014 with an R² of ~0.90.</p>
+                                <p>Built time series ARIMA model to analyze air-passenger headcount with an R² of ~0.90.</p>
                                 <img src="assets/passengers.jpeg" alt="ARIMA Model Image">
                             </div>
                         </li>
                         <li><strong>DBMS for Indian Jewelry Retailer:</strong>
                             <div class="subsection">
                                 <h3>Highlights:</h3>
-                                <p>Prepared SQL queries to evaluate business metrics like inventory turnover.</p>
+                                <p>Prepared SQL queries to evaluate key business metrics like inventory turnover.</p>
                                 <img src="assets/jewelry_store.jpeg" alt="DBMS Image">
                             </div>
                         </li>
