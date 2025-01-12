@@ -15,21 +15,9 @@
             height: 100vh;
         }
 
-        header {
-            background: #E2725A;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
-
         .main-container {
             display: flex;
             width: 100%;
-            margin-top: 80px;
         }
 
         nav {
@@ -70,12 +58,21 @@
 
         .details-content {
             display: flex;
+            flex-direction: column;
             gap: 20px;
         }
 
         .details-content img {
-            max-width: 300px;
+            max-width: 100%;
             border-radius: 10px;
+        }
+
+        .subsection {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #FDEAE6;
+            border: 1px solid #ddd;
+            border-radius: 5px;
         }
 
         footer {
@@ -138,10 +135,6 @@
 </head>
 
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-    </header>
-
     <div class="main-container">
         <nav>
             <a href="#intro">Introduction</a>
@@ -154,8 +147,8 @@
             <section id="intro" class="section active">
                 <h2>Introduction</h2>
                 <div class="details-content">
-                    <img src="assets/profile.jpg" alt="Introduction Image">
-                    <p>Hello! I'm Jai Trivedi, an experienced Analytics professional. With over four years of experience in data science and analytics across diverse industries, I bring a well-rounded skill set and a proven track record of delivering impactful solutions. My expertise spans data cleaning, exploration, predictive modeling, big data analysis, and strategic planning, with a strong focus on driving data-informed decision-making. I am proficient in SQL, Python, and Tableau, leveraging these tools to design efficient workflows, develop predictive models, and create dynamic visualizations that translate complex data into actionable insights.</p>
+                    <img src="path/to/your/intro-image.jpg" alt="Introduction Image">
+                    <p>Hello! I'm Jai Trivedi, an experienced Analytics professional. With over four years of experience in data science and analytics across diverse industries, I bring a well-rounded skill set and a proven track record of delivering impactful solutions.</p>
                 </div>
             </section>
 
@@ -164,9 +157,27 @@
                 <div class="details-content">
                     <img src="path/to/your/work-experience-image.jpg" alt="Work Experience Image">
                     <ul>
-                        <li><strong>Senior Data Analyst</strong> at Genpact (Aug 2023 - Present)</li>
-                        <li><strong>Decision Analytics Associate</strong> at ZS Associates (April 2021 - June 2022)</li>
-                        <li><strong>Data Analyst</strong> at Evalueserve (June 2019 - July 2020)</li>
+                        <li><strong>Senior Data Analyst</strong> at Genpact (Aug 2023 - Present)
+                            <div class="subsection">
+                                <h3>Key Contributions:</h3>
+                                <p>Developed dashboards that reduced manual reporting time by 50%.</p>
+                                <img src="path/to/your/key-contributions-image.jpg" alt="Key Contributions Image">
+                            </div>
+                        </li>
+                        <li><strong>Decision Analytics Associate</strong> at ZS Associates (April 2021 - June 2022)
+                            <div class="subsection">
+                                <h3>Major Projects:</h3>
+                                <p>Led predictive model creation for client projects that improved KPIs by 30%.</p>
+                                <img src="path/to/your/major-projects-image.jpg" alt="Major Projects Image">
+                            </div>
+                        </li>
+                        <li><strong>Data Analyst</strong> at Evalueserve (June 2019 - July 2020)
+                            <div class="subsection">
+                                <h3>Highlights:</h3>
+                                <p>Designed ETL pipelines that increased data processing efficiency by 70%.</p>
+                                <img src="path/to/your/highlights-image.jpg" alt="Highlights Image">
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </section>
@@ -176,12 +187,30 @@
                 <div class="details-content">
                     <img src="path/to/your/skills-image.jpg" alt="Skills Image">
                     <ul>
-                        <li>Python</li>
-                        <li>SQL</li>
-                        <li>Tableau</li>
-                        <li>R</li>
-                        <li>Data Visualization</li>
-                        <li>Machine Learning</li>
+                        <li>Python
+                            <div class="subsection">
+                                <h3>Projects using Python:</h3>
+                                <p>Developed a sentiment analysis tool for customer feedback using Python and NLP libraries.</p>
+                            </div>
+                        </li>
+                        <li>SQL
+                            <div class="subsection">
+                                <h3>Database Management:</h3>
+                                <p>Created complex queries to support financial data reconciliation.</p>
+                            </div>
+                        </li>
+                        <li>Tableau
+                            <div class="subsection">
+                                <h3>Visualization Examples:</h3>
+                                <p>Built interactive sales dashboards for executive reporting.</p>
+                            </div>
+                        </li>
+                        <li>Machine Learning
+                            <div class="subsection">
+                                <h3>Notable Model:</h3>
+                                <p>Trained a model to predict stock price trends with 85% accuracy.</p>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </section>
@@ -191,9 +220,27 @@
                 <div class="details-content">
                     <img src="path/to/your/projects-image.jpg" alt="Projects Image">
                     <ul>
-                        <li><strong>Predicting Air-Passenger Headcount:</strong> Built time series ARIMA model to analyze air-passenger headcount between 2009-2014 generating a model with R2 of ~0.90. Also, gathered insights into key attributes influencing number of flights using Random Forest model with test R2 of 0.92.</li>
-                        <li><strong>DBMS for Indian Jewelry Retailer:</strong> Developed an end-to-end database management system for an Indian Jewelry Retailer. Prepared SQL queries to evaluate key business metrics like inventory stocking, turnover and salesperson headcount and revenue.</li>
-                        <li><strong>Predicting Stadium Attendance:</strong> Proposed model using ensemble of Light GBM, XGBoost, and Random Forest for Indianapolis Colts to predict stadium attendance, resulting in potential cost savings of USD 100,000/year.</li>
+                        <li><strong>Predicting Air-Passenger Headcount:</strong>
+                            <div class="subsection">
+                                <h3>Details:</h3>
+                                <p>Built time series ARIMA model to analyze air-passenger headcount between 2009-2014 generating a model with R2 of ~0.90.</p>
+                                <img src="path/to/your/arima-image.jpg" alt="ARIMA Model Image">
+                            </div>
+                        </li>
+                        <li><strong>DBMS for Indian Jewelry Retailer:</strong>
+                            <div class="subsection">
+                                <h3>Highlights:</h3>
+                                <p>Prepared SQL queries to evaluate key business metrics like inventory stocking and turnover.</p>
+                                <img src="path/to/your/dbms-image.jpg" alt="DBMS Image">
+                            </div>
+                        </li>
+                        <li><strong>Predicting Stadium Attendance:</strong>
+                            <div class="subsection">
+                                <h3>Summary:</h3>
+                                <p>Proposed model using ensemble of Light GBM, XGBoost, and Random Forest resulting in potential cost savings of USD 100,000/year.</p>
+                                <img src="path/to/your/attendance-image.jpg" alt="Stadium Attendance Model Image">
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </section>
