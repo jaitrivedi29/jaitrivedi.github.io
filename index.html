@@ -13,7 +13,7 @@
             line-height: 1.6;
             display: flex;
             height: 100vh;
-            background-color: #caf0f8; /* Lightest blue */
+            background-color: white; /* White background */
             color: #1c1c1c; /* Dark gray for readable text */
         }
 
@@ -24,7 +24,7 @@
 
         nav {
             width: 20%;
-            background: #0077b6; /* Darker blue */
+            background: #0077b6; /* Dark blue */
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -41,8 +41,8 @@
         }
 
         nav a:hover {
-            background-color: #00b4d8; /* Medium blue for hover */
-            color: white;
+            background-color: #caf0f8; /* Light blue for hover */
+            color: #0077b6;
         }
 
         .content {
@@ -66,21 +66,21 @@
         }
 
         .details-content img {
-            max-width: 18%; /* Smaller size for the introduction image */
+            max-width: 20%; /* Smaller size for the introduction image */
             height: auto;
             margin: 0 auto;
             border-radius: 10px;
         }
 
         .details-content p {
-            font-size: 1.4em; /* Larger font size for introduction text */
+            font-size: 1.5em; /* Larger font size for introduction text */
         }
 
         .subsection {
             margin-top: 20px;
             padding: 10px;
-            background-color: #90e0ef; /* Light blue for contrast */
-            border: 1px solid #00b4d8;
+            background-color: #caf0f8; /* Light blue background */
+            border: 1px solid #0077b6;
             border-radius: 5px;
         }
 
@@ -97,9 +97,14 @@
 
         h1.title {
             text-align: center;
-            color: #00b4d8; /* Medium blue for the title */
+            color: #0077b6; /* Dark blue for the title */
             margin-top: 20px;
-            font-size: 2.2em;
+            font-size: 2.5em; /* Larger title */
+        }
+
+        h2 {
+            font-size: 2em; /* Larger H2 headings */
+            color: #0077b6; /* Dark blue */
         }
 
         p, h3, li {
@@ -130,6 +135,7 @@
             }
         }
     </style>
+    
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('.section');
