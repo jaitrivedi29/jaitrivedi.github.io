@@ -1,603 +1,101 @@
-<!-- HELLO
--
-DevFolio is a minimal, clean, lightweight and fully responsive template for Devlopers!
-Created by Anil Seervi.
--
-GitHub repo: https://github.com/AnilSeervi/DevFolio
-README: https://github.com/AnilSeervi/DevFolio/blob/master/README.md
--
-Have fun creating your portfolio on this template!!! -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-
-    <!-- Title: add your Portfolio websites's title here -->
-    <title>Jai Trivedi | Data Science and Analytics Enthusiast</title>
-
-    <!-- Add some coding keywords below, Ex: (javascript, yourusername, etc) -->
-    <meta name="keywords" content="Jai Trivedi, Predictive Analytics, Data Science, Big Data Analytics" />
-
-    <!-- Improve your SEO by adding a small descrption of you -->
-    <meta name="description" content="[Jai Trivedi] | Data Scientist" />
-
-    <!-- Add a your png Logo to the assets folder and change the href attr accordingly  -->
-    <link rel="icon" type="image/png" href="./assets/devfolio-logo.png" /> 
-
-    <!-- Add your primary-theme color for the value of content -->
-    <meta name="theme-color" content="#36d1dc" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <!-- Fill content with the URL of this portfolio you'll host -->
-    <meta property="og:url" content="https://devfolio.js.org/" />
-    <!-- Fill content with the title of your portfolio(Recommended to use what you put in <title> tag) -->
-    <meta property="og:title" content="[Your name here] | Developer" />
-    <!-- Give a short description that'll show up when you/someone shares your portfolio on different platform -->
-    <meta property="og:description" content="Made using DevFolio Template" />
-    <!-- Add a thumbnail image in assets folder and fill the content attr with URL to that thumbnail 
-      so that a thumbnail image of your portfolio is shown while shared on other platform -->
-    <meta
-      property="og:image"
-      content="https://devfolio.js.org/assets/devfolio.png"
-    />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <!-- Again fill content attr with the URL of this portfolio you'll host -->
-    <meta property="twitter:url" content="https://devfolio.js.org" />
-    <!-- Recommended to use the same text used within <title> element -->
-    <meta property="twitter:title" content="[Your name here] | Developer" />
-    <!-- short description that shows up while your portfolio is shared -->
-    <meta
-      property="twitter:description"
-      content="Made using DevFolio Template"
-    />
-    <!-- Fill content with the URL to the thumbnail image that you'll put in the assets folder -->
-    <meta
-      property="twitter:image"
-      content="https://anilseervi.vercel.app/assets/devfolio.png"
-    />
-
-    <!-- link tags -->
-    <link rel="preload" as="style" href="./css/main.css" />
+    <title>Jai Trivedi | Data Science and Analytics Professional</title>
+    <meta name="description" content="Jai Trivedi - Data Scientist with expertise in predictive analytics, big data analysis, and strategic planning." />
     <link rel="stylesheet" href="./css/main.css" />
-
-    <!-- FontAwesome Icons link -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script defer src="./javascript/scrollreveal.min.js"></script>
-    <script
-      defer
-      type="text/javascript"
-      src="./javascript/scrollveal.js"
-    ></script>
-
-    <!-- Remove Google Analytics once you have your portfolio website set-up -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-122228201-4"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || []
-      function gtag() {
-        dataLayer.push(arguments)
-      }
-      gtag("js", new Date())
-
-      gtag("config", "UA-122228201-4")
-    </script>
-    <!-- End of Google Analytics -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
   </head>
   <body>
-    <!-- Hero Section -->
-    <div id="hero">
-      <section class="container">
-        <h1 class="hero-title">
-          Hi, my name is <span class="text-color-main name">Jai Trivedi</span>
-          <br />
-          I'm a Data Science and Analytics Professional
-        </h1>
-        <p class="hero-cta">
-          <a class="cta-btn cta-btn--hero" href="#about">Get in touch</a>
-        </p>
+    <header id="hero">
+      <div class="container">
+        <h1>Hi, I'm <span class="text-color-main">Jai Trivedi</span></h1>
+        <h2>Data Science and Analytics Professional</h2>
+        <a href="#contact" class="cta-btn">Get in touch</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="about">
+        <div class="container">
+          <h2>About Me</h2>
+          <img src="./assets/profile.jpg" alt="Jai Trivedi" width="250" height="250" />
+          <p>With over four years of experience in data science and analytics across diverse industries, I bring a well-rounded skill set and a proven track record of delivering impactful solutions. My expertise spans data cleaning, exploration, predictive modeling, big data analysis, and strategic planning, with a strong focus on driving data-informed decision-making.</p>
+          <a href="https://www.linkedin.com/in/jai-trivedi-32138b135/overlay/1635522541434/single-media-viewer/?profileId=ACoAACD7SAkBahQLQtZZMnknCRFgkZ6denGXVtY" class="cta-btn">View Resume</a>
+        </div>
       </section>
-      <a href="#about" class="scroll-down-link" aria-label="scroll-down">
-        <div class="scroll-down"></div
-      ></a>
-    </div>
-    <!-- /END Hero Section -->
 
-    <!-- About Section -->
-    <section id="about">
+      <section id="experience">
+        <div class="container">
+          <h2>Work Experience</h2>
+          <div class="job">
+            <h3>Senior Analyst - Genpact</h3>
+            <ul>
+              <li>Directed cross-functional team collaboration for strategic pricing and promotional strategies.</li>
+              <li>Developed data-driven insights for a ~$100 million/year rewards program using SQL and Tableau.</li>
+              <li>Implemented a week-on-week inventory tracker using SQL and Python.</li>
+              <li>Led GenAI chatbot integration, reducing customer handling time by 30%.</li>
+              <li>Streamlined processes, saving $133,000 annually through automation.</li>
+            </ul>
+          </div>
+          <!-- Add other job experiences similarly -->
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="container">
+          <h2>Skills</h2>
+          <ul>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>Tableau</li>
+            <li>Statistical Analysis</li>
+            <li>Feature Engineering</li>
+            <li>Exploratory Data Analysis</li>
+            <li>Cloud Tools: AWS & GCP</li>
+            <li>Predictive Analytics</li>
+            <li>Regression Analysis</li>
+            <li>Natural Language Processing</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="project">
+            <h3>Predicting Stadium Attendance</h3>
+            <p>Proposed model using ensemble of Light GBM, XG Boost and Random Forest for Indianapolis Colts to predict stadium attendance, resulting in potential cost savings of USD 100,000/year.</p>
+            <a href="https://github.com/jaitrivedi29/NFL-attendance-prediction" class="cta-btn">GitHub Repo</a>
+          </div>
+          <!-- Add other projects similarly -->
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <h2>Contact</h2>
+          <p>M: +1-765-775-7498</p>
+          <a href="mailto:trivedij@purdue.edu" class="cta-btn">Email Me</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
       <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="row about-wrapper">
-          <div class="about-wrapper__image">
-            <img
-              class="img-fluid"
-              src="./assets/profile.jpg"
-              alt="Profile Image"
-              width="350"
-              height="450"
-            />
-          </div>
-          <div class="about-wrapper__info">
-            <p class="about-wrapper__info-text">
-              With over four years of experience in data science and analytics across diverse industries, I bring a well-rounded skill set and a proven track record of delivering impactful solutions. 
-              My expertise spans data cleaning, exploration, predictive modeling, big data analysis, and strategic planning, with a strong focus on driving data-informed decision-making. 
-              I am proficient in SQL, Python, and Tableau, leveraging these tools to design efficient workflows, develop predictive models, and create dynamic visualizations that translate complex data into actionable insights.
-            </p>
-            <p class="about-wrapper__info-text">
-              In addition to successfully executing complex projects, I have demonstrated leadership by managing teams and mentoring colleagues, fostering a collaborative environment to achieve organizational goals.
-              I hold a Master’s degree in Business Analytics and Information Management from Purdue University, renowned for its excellence in analytics and management education.
-            </p>
-            <p class="about-wrapper__info-text">
-              Beyond my professional endeavors, I use my free time training for marathons and enjoy traveling.
-            </p>
-            <span class="about-wrapper__cta">
-              <a href="https://www.linkedin.com/in/jai-trivedi-32138b135/overlay/1635522541434/single-media-viewer/?profileId=ACoAACD7SAkBahQLQtZZMnknCRFgkZ6denGXVtY" class="cta-btn cta-btn--resume">View Resume</a>
-            </span>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- /END About Section -->
-
-
-
-    <!--Projects Section-->
-    <section id="projects">
-      <div class="container">
-        <div class="project-wrapper">
-          <h2 class="section-title dark-blue-text">Work Experience</h2>
-
-          <!-- Each .row is a project -->
-  <article class="row">
-    <div class="project-wrapper__text">
-      <h3 class="project-wrapper__text-title">Genpact - Senior Analyst</h3>
-      <p class="project-wrapper__text-info">
-        - Directed a cross-functional team, effectively collaborating with finance and marketing stakeholders to inform strategic pricing and promotional strategies decision-making.
-      </p><p class="project-wrapper__text-info">
-          - Developed and delivered data-driven insights for a ~$100 million/year rewards program for retail distributors at a Fortune 50 Med-Tech company, leveraging SQL for data aggregation and Tableau for impactful visual storytelling.
-        </p><p class="project-wrapper__text-info">
-            - Implemented a week-on-week inventory tracker using SQL and Python, enabling account managers to monitor inventory levels across national retailers and proactively address SKU shortages.
-          </p><p class="project-wrapper__text-info">
-              - Led the end-to-end integration of a GenAI chatbot into field sales operations, achieving a 30% reduction in average customer handling time through streamlined workflows and enhanced operational efficiency.
-            </p><p class="project-wrapper__text-info">
-                - Streamlined operational processes, saving $133,000 annually by automating high-priority projects, reducing execution time by 25%, and ensuring consistent delivery of critical tasks.
-              </p><p class="project-wrapper__text-info">
-                  - Collaborated with North American account managers to plan, track, and deliver sales metrics for 37,000 key accounts using a dynamic Tableau dashboard, improving stakeholder visibility and decision-making.
-      </p>
-<!-----      <div class="project-wrapper__text-btns">
-        <a
-          href="hhttps://www.genpact.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="cta-btn cta-btn--hero cta-btn--projects"
-          >Company Website</a
-        >
-        <a href="#" target="_blank" class="cta-btn text-color-main"
-          ></a
-        >
-      </div>
-    </div>
-
-    <div class="project-wrapper__image">
-      <a href="#" target="_blank" rel="noopener noreferrer">
-        <div class="thumbnail rounded">
-          <img
-            src="/Users/Jai/Documents/GitHub/jaitrivedi.github.io/assets/Genpact-Hoodoo-Digital.png"
-            class="img-fluid"
-            alt="Project Image"
-            width="1366"
-            height="767"
-          />
-        </div>
-      </a>
-    </div>
-  </article>
--->
-  <!-- /END Project --> 
-
-          <!-- Each .row is a project -->
-          <article class="row">
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">SIL International - Data Science Intern</h3>
-              <p class="project-wrapper__text-info">
-                -Integrated AWS services such as S3 for data uploads and used Sagemaker Notebooks with Lambda functions and Lifecycle
-                configurations to automate classification model to distinguish Mayan dialects from Spanish, improving language identification efforts
-                in South America
-              </p>
-<!--              <div class="project-wrapper__text-btns">
-                <a
-                  href="https://github.com/jaitrivedi29/SIL-Language-Identification-"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="cta-btn cta-btn--hero cta-btn--projects"
-                  >Project Poster</a
-                >
-                <a href="#" target="_blank" class="cta-btn text-color-main"
-                  ></a
-                >
-              </div>
-            </div>
-
-            <div class="project-wrapper__image">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <img
-                    src="./assets/SIL.jpeg"
-                    class="img-fluid"
-                    alt="Project Image"
-                    width="1366"
-                    height="767"
-                  />
-                </div>
-              </a>
-            </div>
-          </article>
--->
-          <!-- /END Project -->
-
-          <!-- Each .row is a project -->
-          <article class="row">
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">ZS Assoicates - Desicion Analytics Associate</h3>
-              <p class="project-wrapper__text-info">
-                 - Facilitated agile development cycles, collaborating with cross-functional teams to prioritize and refine features for machine learning models managing over 15 million customer records.
-                </p><p class="project-wrapper__text-info"> Partnered with data scientists to design and optimize predictive models like Cox Regression and Random Forest classifier for patient survival outcomes, achieving a 16% improvement in accuracy.
-                </p><p class="project-wrapper__text-info">- Delivered a 4% revenue lift by developing a promotional effectiveness model, incorporating key metrics like revenue, ROI, and market share using Python and SQL for data processing and analysis.
-                  </p> <p class="project-wrapper__text-info">- Utilized multiple healthcare claims data sources on Dataiku to drive analysis into brand positioning and patient analytics, updating existing customer targeting efforts.
-              </p>
-              <div class="project-wrapper__text-btns">
-                <a
-                  href="https://www.zs.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="cta-btn cta-btn--hero cta-btn--projects"
-                  >Company Website</a
-                >
-                <a href="#" target="_blank" class="cta-btn text-color-main"
-                  ></a
-                >
-              </div>
-            </div>
-<!--
-            <div class="project-wrapper__image">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <img
-                    src="./assets/ZSLogo.jpeg"
-                    class="img-fluid"
-                    alt="Project Image"
-                    width="1366"
-                    height="767"
-                  />
-                </div>
-              </a>
-            </div>
-          </article>
--->
-          <!-- /END Project -->
-     <!-- Each .row is a project -->
-     <article class="row">
-      <div class="project-wrapper__text">
-        <h3 class="project-wrapper__text-title">Kimo Clothing - Business Analyst</h3>
-        <p class="project-wrapper__text-info">
-          - Implemented ARIMA forecast models to track stockout rates for SKUs. The model had an 85% accuracy in forecasting week-on-week inventory levels.</p>
-          <p class="project-wrapper__text-info">  
-          - Created Tableau dashboards to monitor inventory shipment worth ~$0.2 million/week, enhancing tracking and identifying sales trends for stakeholders.
-        </p>
-        <div class="project-wrapper__text-btns">
-          <a
-            href="https://kimoconcept.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="cta-btn cta-btn--hero cta-btn--projects"
-            >Company Website</a
-          >
-          <a href="#" target="_blank" class="cta-btn text-color-main"
-            ></a
-          >
-        </div>
-      </div>
-<!--
-      <div class="project-wrapper__image">
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <div class="thumbnail rounded">
-            <img
-              src="./assets/kimo-logo.png"
-              class="img-fluid"
-              alt="Project Image"
-              width="1366"
-              height="767"
-            />
-          </div>
-        </a>
-      </div>
-    </article>
--->
-    <!-- /END Project -->
-          <!-- Each .row is a project -->
-          <article class="row">
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">Evalueserve - Business Analyst</h3>
-              <p class="project-wrapper__text-info">
-                - Led to successful deal closure worth $2.5 million for the client’s marketing team by analyzing sales data using SQL and secondary market research to recommend pricing strategies.
-              </p>
-                <p class="project-wrapper__text-info">
-                - Reduced time spent on ad-hoc reporting by 40% by increasing visibility and accessibility of key performance metrics (KPIs) by designing an automated Tableau dashboard.                
-              </p>
-              <div class="project-wrapper__text-btns">
-                <a
-                  href="https://www.evalueserve.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="cta-btn cta-btn--hero cta-btn--projects"
-                  >Company Website</a>
-                <a href="#" target="_blank" class="cta-btn text-color-main"
-                  ></a>
-              </div>
-            </div>
-<!--
-            <div class="project-wrapper__image">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <img
-                    src="./assets/EVS_Logo.webp"
-                    class="img-fluid"
-                    alt="Project Image"
-                    width="1366"
-                    height="767"
-                  />
-                </div>
-
-              </a>
-            </article>
---></section>
-        <article class="row">
-        <h4 class="section-title">Skills</h4>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-        <div class="row">
-          <div class="column">
-            <h2></h2>
-            <i class="material-icons" style="vertical-align:baseline;font-size:60px;color:#21ae57;">bolt</i>
-            <p> Python</p>
-            <i class="material-icons" style="font-size:60px;color:#21ae57;">bolt</i>
-            <p> SQL</p>
-            <i class="material-icons" style="font-size:60px;color:#21ae57;">bolt</i>
-            <p> Tableau</p>
-            <i class="material-icons" style="font-size:60px;color:#21ae57;">bolt</i>
-            <p> Statistical Analysis</p>
-            <i class="material-icons" style="font-size:60px;color:#21ae57;">bolt</i>
-            <p> Feature Engineering</p>
-          </div>
-          <div class="column">
-            <i class="material-icons" style="font-size:60px;color:#21ae57;">bolt</i>
-            <p> Exploratory Data Analysis</p>
-            <i class="material-icons" style="font-size:60px;color:#21ae57;">bolt</i>
-            <p>Cloud Tools: AWS & GCP</p>
-            <i class="material-icons" style="font-size:60px;color:#21ae57;">bolt</i>
-            <p> Predictive Analytics</p>
-            <i class="material-icons" style="font-size:60px;color:#21ae57;">bolt</i>
-            <p> Regression Analysis</p>
-            <i class="material-icons" style="font-size:60px;color:#21ae57;">bolt</i>
-            <p> Natural Language Processing</p>
-          </div>
-        </div>
-            </div>
-          </article>
-
-          
-          <!-- /END Project -->
-        </div>
-      </div>
-    </section>
-    
-    <!-- End Projects Section -->
-    
-    <section id="projects">
-      <div class="container">
-        <div class="project-wrapper">
-          <h2 class="section-title dark-blue-text">Projects</h2>
-
-          <!-- Each .row is a project -->
-          <article class="row">
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">Predicting Stadium Attendance</h3>
-              <p class="project-wrapper__text-info">
-                Proposed model using ensemble of Light GBM, XG Boost and Random Forest for 
-                Indianapolis Colts to predict stadium attendance, resulting in potential cost savings of USD 100,000/year
-              </p>
-              <div class="project-wrapper__text-btns">
-                <a
-                  href="https://github.com/jaitrivedi29/NFL-attendance-prediction"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="cta-btn cta-btn--hero cta-btn--projects"
-                  >GitHub Repo</a
-                >
-                <a href="#" target="_blank" class="cta-btn text-color-main"
-                  ></a
-                >
-              </div>
-            </div>
-
-            <div class="project-wrapper__image">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <img
-                    src="./assets/lucas ooil stadium.jpeg"
-                    class="img-fluid"
-                    alt="Project Image"
-                    width="400"
-                    height="200"
-                  />
-                </div>
-              </a>
-            </div>
-          </article>
-          <!-- /END Project -->
-     <!-- Each .row is a project -->
-     <article class="row">
-      <div class="project-wrapper__text">
-        <h3 class="project-wrapper__text-title">DBMS for Indian Jewelry Retailer</h3>
-        <p class="project-wrapper__text-info">
-          Developed an end to end database management system for an Indian Jewelry Retialer.
-          Prepared SQL queries to evaluate key business metrics like inventory stocking, turnover and salesperson headcount and revenue.
-        </p>
-        <div class="project-wrapper__text-btns">
-          <a
-            href="https://github.com/jaitrivedi29/jewelry-store-database"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="cta-btn cta-btn--hero cta-btn--projects"
-            >GitHub Repo</a
-          >
-          <a href="#" target="_blank" class="cta-btn text-color-main"
-            ></a
-          >
-        </div>
-      </div>
-
-      <div class="project-wrapper__image">
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          <div class="thumbnail rounded">
-            <img
-              src="./assets/jewelry_store.jpeg"
-              class="img-fluid"
-              alt="Project Image"
-              width="400"
-              height="200"
-            />
-          </div>
-        </a>
-      </div>
-    </article>
-    <!-- /END Project -->
-          <!-- Each .row is a project -->
-          <article class="row">
-            <div class="project-wrapper__text">
-              <h3 class="project-wrapper__text-title">Predicting Air-Passenger Headcount</h3>
-              <p class="project-wrapper__text-info">
-              Built time series ARIMA model to analyze air-passenger headcount between 2009-2014 generating a model with R2 of ~0.90.
-              Also, gathered insights into key attributes influencing number of flights using Random Forest model with test R2 of 0.92.
-              </p>
-              <div class="project-wrapper__text-btns">
-                <a
-                  href="https://github.com/jaitrivedi29/open-flights-data"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="cta-btn cta-btn--hero cta-btn--projects"
-                  >GitHub Repo</a
-                >
-                <a href="#" target="_blank" class="cta-btn text-color-main"
-                  ></a
-                >
-              </div>
-            </div>
-
-            <div class="project-wrapper__image">
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
-                  <img
-                    src="./assets/passengers.jpeg"
-                    class="img-fluid"
-                    alt="Project Image"
-                    width="300"
-                    height="100"
-                  />
-                </div>
-              </a>
-            </article>
-
-
-          
-          <!-- /END Project -->
-        </div>
-      </div>
-    </section>
-    
-    <!-- End Projects Section -->
-
-    
-    <!-- Contact Section -->
-    <section id="contact">
-      <div class="container";padding:20px>
-        <h2 class="section-title">Contact</h2>
-        
-        <div class="contact-wrapper">
-          <i class="fa-solid fa-phone fa-2xl"></i>
-          <p class="contact-wrapper__text"></p>
-          <p class="contact-wrapper__text">M: +1-765-775-7498</p>
-          <a href="mailto:trivedij@purdue.edu" class="cta-btn cta-btn--resume">Email</a>
-        </div>
-      </div>
-    </section>
-    <!-- END Contact Section -->
-
-    <!-- Footer Section -->
-    <footer class="footer">
-      <div class="container">
-        <a href="#hero" class="back-to-top" aria-label="go back to top">
-          <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
-        </a>
         <div class="social-links">
-          <a
-            href="https://www.instagram.com/jai_trivediii/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="instagram"
-          >
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a
-            href="https://www.linkedin.com/in/jai-trivedi-32138b135/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="linkedin"
-          >
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-          <a
-            href="https://github.com/jaitrivedi29"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="github"
-          >
-            <i class="fa-brands fa-github"></i>
-          </a>
+          <a href="https://www.instagram.com/jai_trivediii/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/in/jai-trivedi-32138b135/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/jaitrivedi29" aria-label="GitHub"><i class="fab fa-github"></i></a>
         </div>
-        <hr />
-        <p class="footer__text">
-          &copy; <span id="year"></span> Jai Trivedi
-          <a
-            href="https://github.com/jaitrivedi29"
-            target="_blank"
-            rel="noopener noreferrer"
-            ></a
-          > <br />Made with &hearts;
-        </p>
+        <p>&copy; <span id="year"></span> Jai Trivedi</p>
       </div>
     </footer>
-    <!-- END Footer Section -->
 
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear()
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-    <script src="./javascript/vanilla-tilt.min.js"></script>
-    <script type="text/javascript" src="./javascript/valtilt.js"></script>
   </body>
 </html>
