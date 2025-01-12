@@ -27,7 +27,8 @@
 
         nav {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             background: #C65A49;
             padding: 10px 0;
         }
@@ -35,8 +36,10 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 10px 0;
             padding: 5px 10px;
+            width: 100%;
+            text-align: center;
         }
 
         nav a:hover {
@@ -65,11 +68,45 @@
             padding: 10px;
             background-color: #FDEAE6;
             border-radius: 5px;
+            display: flex;
+            flex-direction: column;
         }
 
         summary {
             font-size: 1.2em;
             cursor: pointer;
+            width: 100%;
+        }
+
+        summary::marker {
+            display: none;
+        }
+
+        summary::before {
+            content: '\25B6';
+            padding-right: 10px;
+            font-size: 1.2em;
+            vertical-align: middle;
+        }
+
+        details[open] summary::before {
+            content: '\25BC';
+        }
+
+        details[open] {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        details img {
+            max-width: 40%;
+            margin-right: 20px;
+            border-radius: 10px;
+        }
+
+        .details-content {
+            flex-grow: 1;
         }
 
         ul {
@@ -79,14 +116,6 @@
 
         ul li {
             margin: 10px 0;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin: 10px auto;
-            border-radius: 10px;
         }
 
         footer {
@@ -100,12 +129,13 @@
         }
 
         @media (max-width: 768px) {
-            nav {
+            details {
                 flex-direction: column;
             }
 
-            nav a {
-                margin: 5px 0;
+            details img {
+                max-width: 100%;
+                margin-bottom: 10px;
             }
         }
     </style>
@@ -153,36 +183,44 @@
     <section id="intro" class="container">
         <details open>
             <summary>Introduction</summary>
-            <img src="path/to/your/intro-image.jpg" alt="Introduction Image">
-            <p>Hello! I'm Jai Trivedi, an experienced Analytics professional. With over four years of experience in data science and analytics across diverse industries, I bring a well-rounded skill set and a proven track record of delivering impactful solutions. My expertise spans data cleaning, exploration, predictive modeling, big data analysis, and strategic planning, with a strong focus on driving data-informed decision-making. I am proficient in SQL, Python, and Tableau, leveraging these tools to design efficient workflows, develop predictive models, and create dynamic visualizations that translate complex data into actionable insights.</p>
+            <div class="details-content">
+                <img src="assets/profile.jpg" alt="Introduction Image">
+                <p>Hello! I'm Jai Trivedi, an experienced Analytics professional. With over four years of experience in data science and analytics across diverse industries, I bring a well-rounded skill set and a proven track record of delivering impactful solutions. My expertise spans data cleaning, exploration, predictive modeling, big data analysis, and strategic planning, with a strong focus on driving data-informed decision-making. I am proficient in SQL, Python, and Tableau, leveraging these tools to design efficient workflows, develop predictive models, and create dynamic visualizations that translate complex data into actionable insights.</p>
+            </div>
         </details>
     </section>
 
     <section id="work-experience" class="container">
         <details>
             <summary>Work Experience</summary>
-            <img src="path/to/your/work-experience-image.jpg" alt="Work Experience Image">
-            <ul>
-                <li><strong>Senior Data Analyst</strong> at Genpact (Aug 2023 - Present)</li>
-                <li><strong>Decision Analytics Associate</strong> at ZS Associates (April 2021 - June 2022)</li>
-                <li><strong>Data Analyst</strong> at Evalueserve (June 2019 - July 2020)</li>
-            </ul>
+            <div class="details-content">
+                <img src="path/to/your/work-experience-image.jpg" alt="Work Experience Image">
+                <ul>
+                    <li><strong>Senior Data Analyst</strong> at Genpact (Aug 2023 - Present)</li>
+                    <li><strong>Decision Analytics Associate</strong> at ZS Associates (April 2021 - June 2022)</li>
+                    <li><strong>Data Analyst</strong> at Evalueserve (June 2019 - July 2020)</li>
+                </ul>
+            </div>
         </details>
     </section>
 
     <section id="skills" class="container">
         <details>
             <summary>Skills</summary>
-            <img src="path/to/your/skills-image.jpg" alt="Skills Image">
-            <ul id="skills-list"></ul>
+            <div class="details-content">
+                <img src="path/to/your/skills-image.jpg" alt="Skills Image">
+                <ul id="skills-list"></ul>
+            </div>
         </details>
     </section>
 
     <section id="projects" class="container">
         <details>
             <summary>Projects</summary>
-            <img src="path/to/your/projects-image.jpg" alt="Projects Image">
-            <ul id="projects-list"></ul>
+            <div class="details-content">
+                <img src="path/to/your/projects-image.jpg" alt="Projects Image">
+                <ul id="projects-list"></ul>
+            </div>
         </details>
     </section>
 
